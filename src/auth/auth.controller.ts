@@ -8,7 +8,7 @@ export class AuthController {
   @UseGuards(LocalAuthGuard)
   @Post('login')
   async login(@Request() req, @Res({ passthrough: true }) res) {
-    console.log('This login function is called');
+    // console.log('This login function is called');
     const accessToken = await this.authService.login(req.user);
     // Save to cookie
     res.cookie('accessToken', accessToken, {

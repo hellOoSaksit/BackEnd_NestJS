@@ -50,7 +50,7 @@ export class UserinfoService {
   }
 
   async findOne(uid:string):Promise<string | any> {
-    console.log(uid);
+    // console.log(uid);
     try {
       const response = await this.userRepository.findOne({
         where:[
@@ -68,7 +68,7 @@ export class UserinfoService {
         }
       }
     } catch (error) {
-      console.log('Error fetching user:', error);
+      // console.log('Error fetching user:', error);
       return `Error fetching user: ${error.message}`;
     }
   }
